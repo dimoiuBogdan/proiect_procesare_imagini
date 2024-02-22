@@ -1,0 +1,34 @@
+- DOCUMENTATIE PROIECT -
+  de Dimoiu Bogdan
+
+Info
+Unsharp masking este o tehnica de accentuare a imaginii, folosita în mod obișnuit în prelucrarea imaginilor digitale ( jocuri, image editing )
+Kernel este o matrice patratica de marimi mici, care determina aria de pixeli luata in considerare. Cu cat mai mare matricea, cu atat mai puternic efectul de sharpening
+Sigma este utilizat pentru a controla efectul de blur aplicat imaginii
+
+Librarii utilizate
+cv2 / numpy / tkinter / PIL
+
+Valori constante extrase
+DEFAULT_KERNEL_SIZE: Valoarea default pentru kernel
+DEFAULT_SIGMA: Valoarea default pentru sigma
+KERNEL_SIZE_MIN, KERNEL_SIZE_MAX: Valoarea minima si maxima pentru kernel
+SIGMA_MIN, SIGMA_MAX, SIGMA_RESOLUTION: Valoarea minima si maxima pentru sigma
+
+Clase
+ImageProcessor: Clasa responsabila pentru aplicarea mastii si efectului unei imagini.
+- init(self, kernel_size, sigma): Constructor ce initializeaza valorile a kernel si sigma
+- apply_unsharp_mask(self, image): Aplica masca si efectul imaginii, returnand rezultatul
+
+UnsharpMaskApp : Main-ul aplicatiei
+- init(self, root): initializeaza aplicatia cu o fereastra din libraria Tkinter.
+- _create_ui(self): Creeaza GUI-ul pentru aplicatie.
+- _create_buttons(self): Creeaza butoanele pentru aplicatie.
+- _create_sliders(self): Creeaza sliderele ce permit modificarea valorii pt. kernel și sigma.
+- _create_info_label(self): Creeaza text ce descrie informatii despre imaginea incarcata.
+- load_image(self): Deschide un modal pentru a selecta o imagine, încarca imaginea și o afiseaza în aplicatie.
+- save_image(self): Deschide un modal pentru a selecta o locatie pentru a salva imaginea procesata.
+- show_image(self): Afișeaza imaginile originale si procesate intr-o fereastra noua.
+
+Bibliografie : 
+https://en.wikipedia.org/wiki/Unsharp_masking
