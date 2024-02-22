@@ -31,4 +31,7 @@ UnsharpMaskApp : Main-ul aplicatiei
 - show_image(self): Afișeaza imaginile originale si procesate intr-o fereastra noua.
 
 Bibliografie : 
+https://homepages.inf.ed.ac.uk/rbf/HIPR2/unsharp.htm
 https://en.wikipedia.org/wiki/Unsharp_masking
+https://www.jetbrains.com/pycharm/download/?section=windows
+https://code.visualstudio.com/
